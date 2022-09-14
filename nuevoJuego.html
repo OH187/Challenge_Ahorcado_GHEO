@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content="user-scalable=no">
     <link rel="stylesheet" href="public/css/app.css">
     <title>Ahorcado-GHEO</title>
 </head>
@@ -48,15 +48,18 @@
     </footer>
 
     <script src="src/main.js">
+        var elementoTouch = document.querySelector(".letras");
+        //posteriormente asignamos el manejador de eventos lo cual
+        // se hace de manera convencional.
+        elementoTouch.addEventListener('touchstart', function(event){
+        //Comprobamos si hay varios eventos del mismo tipo
+        if (event.targetTouches.length == 1) { 
+        var touch = event.targetTouches[0]; 
+        // con esto solo se procesa UN evento touch
+        elementoTouch.innerHTML = `<input type="text" hidden>`;
+        }
 
-        document.getElementById("nuevoJuego").addEventListener("click", borrarCookie)
-
-       /*  function borrarCookie(e){
-            if(!e) e = window.event;
-            if(e.target.id=="nuevoJuego"){
-                document.cookie = "expires=Sat, 31 Dec 2020 00:00:00 UTC; path=/";
-            }
-        } */
+    }, false);
 
     </script>
     <!-- public/js/bundle.min -->

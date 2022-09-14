@@ -172,7 +172,6 @@ function adivinar(juego, letra){
 function agregarPalabra(){
         var newWord = document.querySelector(".input-palabra").value;
         const expres = /[\s\d.*+\-¿?^$@{}´\u00E0-\u00FC'()|[\]\\]/gu.test(newWord); //Expresion regular áéíóú-ÁÉÍÓÚ, quita acentos
-
     if(newWord.length > 8 || newWord == ''){
         alert("Ingrese una palabra sin acento y 8 letras maximo");
     }  
@@ -182,8 +181,8 @@ function agregarPalabra(){
                     alert('Escriba una palabra válida o sin acentos');
     
             }else{
+                    
                     //Quitamos el acento
-                    // newWord.focus();
                     var sinAcento = newWord.normalize("NFD").replace(/[\u0300-\u036f]/g, "") //Quita los acentos
                     location.href = "nuevoJuego.html"; //Redireccionamos
                     sessionStorage.setItem("palabra", sinAcento.toUpperCase()); //Guardamos la palabra con sessionStorage

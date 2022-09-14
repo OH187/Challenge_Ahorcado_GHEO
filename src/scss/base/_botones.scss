@@ -1,8 +1,11 @@
 .botones{
     @include botones-mobile;
+    margin: 15rem auto 0 auto;
     @include telefono{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
         width: 90%;
         column-gap: 2rem;
         max-width: 900px;
@@ -15,6 +18,7 @@
 
 .botones-palabra{
     @include botones-mobile;
+    margin: 12rem auto 0 auto;
     @include telefono{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -61,7 +65,7 @@ span img{
 }
 .botones-adivinar{
     @include botones-mobile;
-    margin: auto;
+    margin: 5rem auto 0 auto;
     @include telefono{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

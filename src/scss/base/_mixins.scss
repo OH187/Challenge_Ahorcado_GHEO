@@ -2,7 +2,9 @@
     font-family: $fuente-secundaria;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
 }
 @mixin boton-azul {
     margin: 1rem;
