@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="public/css/app.css">
     <title>Ahorcado-GHEO</title>
 </head>
-<body>
+<body onload="init()">
     <header class="header">
         <p class="logo">a</p>
         <img class="btn-darkMode" src="public/img/dark-mode.svg" alt="Imagen para cambio de tema">
@@ -18,7 +18,7 @@
             <div class="malas"></div>    
         </div>
         
-        <div class="letras adivina">
+        <div class="letras adivina" ontouchstart="startTouch(event)">
         </div>
 
         <div class="adivina">
@@ -48,10 +48,19 @@
     </footer>
 
     <script src="src/main.js">
+
+        function init() {
+        var el=document.getElementById("target1");
+        el.ontouchstart = startTouch;
+    }
         // var malas = document.querySelector("letras");
         var elementoTouch = document.querySelector(".letras");
         //posteriormente asignamos el manejador de eventos lo cual
         // se hace de manera convencional.
+        function startTouch(ev) {
+    // Procesar el evento
+    elementoTouch.innerHTML = `<input type="text">`;
+    }
         window.addEventListener('touchstart', function(event){
         //Comprobamos si hay varios eventos del mismo tipo
         if (event.targetTouches.length == 1) { 
