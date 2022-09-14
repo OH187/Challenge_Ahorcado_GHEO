@@ -1,0 +1,15 @@
+.malas{
+    .gana{
+        color: $amarillo;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .mala{
+        color: $rojo;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .ocultar{
+        display: none;
+    }
+}

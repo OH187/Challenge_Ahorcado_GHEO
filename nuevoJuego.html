@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>Ahorcado-GHEO</title>
+</head>
+<body>
+    <header class="header">
+        <p class="logo">a</p>
+        <img class="btn-darkMode" src="public/img/dark-mode.svg" alt="Imagen para cambio de tema">
+    </header>
+
+        <div class="guillotina">
+            <img id="ahorcado" alt="Imagen del ahorcado">
+            <div class="malas"></div>    
+        </div>
+        
+        <div class="letras adivina">
+        </div>
+
+        <div class="adivina">
+        </div>
+
+        <div class="errado muestra-palabra">
+            <!-- Aparecen las letras -->
+        </div>
+        
+
+    <section class="botones-adivinar">
+            <div class="resultado" id=""></div>
+            <div class="intentos" id=""></div>
+
+        <span><img  src="public/img/info.png" alt="">Ingrese una letra</span>
+        <input id="btnNuevo" class="boton-nuevo" type="button" value="Nuevo juego" onclick="nuevoJuego()">
+        <a href="index.html"><input class="boton-cancelar"  type="button" value="Desistir" ></a>
+    </section>
+
+    <footer class="ft-palabraNueva">
+        <p>Todos los derechos reservados &copy; GHEO 
+        <script>const fecha = new Date; 
+        const year = fecha.getFullYear();
+        document.write(year)
+        </script>
+        </p>
+    </footer>
+
+    <script src="src/main.js">
+
+        document.getElementById("nuevoJuego").addEventListener("click", borrarCookie)
+
+       /*  function borrarCookie(e){
+            if(!e) e = window.event;
+            if(e.target.id=="nuevoJuego"){
+                document.cookie = "expires=Sat, 31 Dec 2020 00:00:00 UTC; path=/";
+            }
+        } */
+
+    </script>
+    <!-- public/js/bundle.min -->
+</body>
+</html>

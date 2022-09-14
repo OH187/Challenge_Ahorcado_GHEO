@@ -1,0 +1,77 @@
+.botones{
+    @include botones-mobile;
+    @include telefono{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        column-gap: 2rem;
+        max-width: 900px;
+        height: 100%;
+        margin: 25rem auto 0 auto;
+        
+    }
+
+}
+
+.botones-palabra{
+    @include botones-mobile;
+    @include telefono{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        column-gap: 2rem;
+        max-width: 900px;
+        height: 100%;
+        align-items: center;
+        margin: 25rem auto 0 auto;
+        span{
+            grid-area: 1 / 1 / span 1 / span 2;
+        }
+        
+    }
+}
+
+.boton-nuevo{
+    @include boton-azul;
+    
+}
+.boton-palabra{
+   @include boton-gris;
+}
+.boton-guardar{
+    @include boton-azul;
+}
+
+.boton-cancelar{
+    @include boton-gris;
+}
+span{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+}
+span img{
+    margin: auto 1rem;
+    width: 2.5rem;
+}
+.ft-palabraNueva{
+    margin: 5rem auto 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.botones-adivinar{
+    @include botones-mobile;
+    margin: auto;
+    @include telefono{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        column-gap: 2rem;
+        max-width: 900px;
+        height: 100%;
+        align-items: center;
+        span{
+            grid-area: 1 / 1 / span 1 / span 2;
+        }
+    }
+}

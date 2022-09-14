@@ -1,0 +1,62 @@
+.guillotina{
+    width: 70%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 20rem;
+    }
+    // .guion{
+    //     color: $otroAzul;
+    //     font-size: 7rem;
+    // }
+}
+
+.errado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.adivina{
+    color: $otroAzul;
+    font-size: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.letras{
+    color: $otroAzul;
+    font-size: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.letra{
+    display: inline-block;
+    text-align: center;
+}
+
+.adivinada{
+    color: $otroAzul;
+    font-size: 4rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-bottom: solid 3px $azul;
+    margin-left: 0.4rem;
+    line-height: 4.5rem;
+}
+.errada{
+    margin-left: 1rem;
+}

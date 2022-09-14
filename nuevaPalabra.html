@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>Ahorcado-GHEO</title>
+</head>
+<body>
+    <header class="header">
+        <p class="logo">a</p>
+        <img class="btn-darkMode" src="public/img/dark-mode.svg" alt="Imagen para cambio de tema">
+    </header>
+
+    
+        <input pattern="^[A-Za-z]+$" maxlength="8" style="text-transform: uppercase" id="palabra" class="input-palabra" type="text" placeholder="Ingrese una palabra" required>
+
+    <section class="botones-palabra">
+        <span><img  src="public/img/info.png" alt="">Maximo 8 letras sin acentos ni caracteres especiales</span>
+        <input id="addPalabra" class="boton-nuevo" type="submit" value="Guardar y empezar" onclick="agregarPalabra()" >
+        <a href="index.html"><input class="boton-cancelar"  type="submit" value="Cancelar"></a>
+    </section>
+
+    <footer class="ft-palabraNueva">
+        <p>Todos los derechos reservados &copy; GHEO 
+        <script>const fecha = new Date; 
+        const year = fecha.getFullYear();
+        document.write(year)
+        </script>
+        </p>
+    </footer>
+
+    <script src="public/js/bundle.min.js"> </script>
+</body>
+</html>

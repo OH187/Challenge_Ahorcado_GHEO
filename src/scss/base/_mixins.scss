@@ -1,0 +1,55 @@
+@mixin botones-mobile {
+    font-family: $fuente-secundaria;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+@mixin boton-azul {
+    margin: 1rem;
+    padding: 2rem;
+    background-color: $azul;
+    color: $blanco;
+    border: none;
+    border-radius: 1.5rem;
+    width: 100%;
+    transition:all;
+
+    &:hover{
+        transition-duration:400ms;
+        transform: scale(.95, .95);
+    }
+}
+
+@mixin boton-gris {
+    margin: 1rem;
+    padding: 2rem;
+    background-color: $gris;
+    border-radius: 1.5rem;
+    border: 2px solid $azul;
+    width: 100%;
+    transition:all;
+    color: $azul;
+
+    &:hover{
+        transition-duration:400ms;
+        transform: scale(.95, .95);
+    }
+}
+
+@mixin telefono {
+    @media (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}

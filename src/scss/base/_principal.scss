@@ -1,0 +1,56 @@
+.header{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 5rem;
+    margin: 0 4rem;
+    color: $azul;
+}
+
+.btn-darkMode{
+    margin-right: 4rem;
+    width: 3rem;
+}
+
+.footer {
+    margin-top: 22rem;
+    text-align: center;  
+    @include telefono{
+        margin-top: 13rem;
+    }
+}
+.input-palabra{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: darken($azul, 15);
+    border: none;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 768px;
+}
+.input-palabra:enabled{
+    border: 0;
+}
+
+.muestra-palabra{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: darken($azul, 15);
+    border: none;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    width: 100%;
+}
+

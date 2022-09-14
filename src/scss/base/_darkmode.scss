@@ -1,0 +1,22 @@
+.dark-mode{
+        background-color: $grisOscuro;
+        .btn-darkMode{
+                
+                filter: invert(1);
+        }
+        .logo{
+                color: lighten($azul, 20);
+        }
+        footer p{
+                color: $blanco;
+        }
+        span{
+                color: darken($gris, 10);
+        }
+        .input-palabra{
+                color: $gris;
+        }
+        .muestra-palabra{
+                color: $gris;
+        }
+}
