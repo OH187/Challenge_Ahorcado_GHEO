@@ -52,11 +52,13 @@ var entrada = document.querySelector('.entrada');
 var juego = null; //Guardamos valor actual
 var finalizado = false;
 malas.innerHTML = '';
+
 //Tomamos las letras que el usuario ingresa    
-window.onkeypress = function adivinarLetra(evento){
+window.onkeyup = function adivinarLetra(evento){
     var btnNuevo = document.getElementById("btnNuevo");
     var letra = evento.key;
     letra = letra.toUpperCase();
+    letra = entrada;
     if(/[^A-ZÑ]/.test(letra)){
         return;
     }
