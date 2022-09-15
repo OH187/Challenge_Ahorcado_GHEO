@@ -56,9 +56,9 @@ malas.innerHTML = '';
 //Tomamos las letras que el usuario ingresa    
 window.onkeyup = function adivinarLetra(evento){
     var btnNuevo = document.getElementById("btnNuevo");
-    var letra = evento.key;
+    evento = entrada.value;
+    var letra = evento;
     letra = letra.toUpperCase();
-    letra = entrada.value;
     if(/[^A-ZÑ]/.test(letra)){
         return;
     }
