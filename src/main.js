@@ -58,7 +58,7 @@ window.onkeyup = function adivinarLetra(evento){
     var btnNuevo = document.getElementById("btnNuevo");
     var letra = evento.key;
     letra = letra.toUpperCase();
-    letra = entrada;
+    letra = entrada.value;
     if(/[^A-ZÑ]/.test(letra)){
         return;
     }
