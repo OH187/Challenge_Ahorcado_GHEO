@@ -47,6 +47,7 @@ var palabraAdivinar = [];
 var imagen = document.querySelector('.guillotina')
 var malas = document.querySelector('.malas');
 var palabraMostrar = [];
+var entrada = document.querySelector('.entrada');
 
 var juego = null; //Guardamos valor actual
 var finalizado = false;
@@ -206,6 +207,7 @@ function palabraAleatoria(){
 
 //Ejecuta la funcion que inicia el juego
 function nuevoJuego(){
+    entrada.value = '';
     malas.innerHTML = '';
     var palabra = palabraAleatoria();
     

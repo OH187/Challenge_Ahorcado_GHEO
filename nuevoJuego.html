@@ -19,24 +19,24 @@
         </div>
         
         
-        <div class="letras adivina" inputmode="text" style="writing-mode: ;A-Za-z">
-            </script>
+        <div class="letras adivina">
         </div>
         
 
-        <div class="adivina" inputmode="text">
+        <div class="adivina" inputmode="text" inputmode="text">
         </div>
 
         <div class="errado muestra-palabra">
             <!-- Aparecen las letras -->
         </div>
+        <div class="ingresar">
+            <input class="entrada" type="text" name="" id="">
+        </div>
         
-
+                
     <section class="botones-adivinar">
-            <div class="resultado" id=""></div>
-            <div class="intentos" id=""></div>
 
-        <span><img  src="public/img/info.png" alt="Imagen de informacion">Ingrese una letra</span>
+        <span><img  src="public/img/info.png" alt="Imagen de informacion">Ingrese una letra </span> 
         <input id="btnNuevo" class="boton-nuevo" type="button" value="Nuevo juego" onclick="nuevoJuego()">
         <a href="index.html"><input class="boton-cancelar"  type="button" value="Desistir" ></a>
     </section>
@@ -48,33 +48,10 @@
         document.write(year)
         </script>
         </p>
+        
     </footer>
 
-    <script src="src/main.js">
-
-    /*     function init() {
-        var el=document.getElementById("target1");
-        el.ontouchstart = startTouch;
-    }
-        // var malas = document.querySelector("letras");
-        var elementoTouch = document.querySelector(".letras");
-        //posteriormente asignamos el manejador de eventos lo cual
-        // se hace de manera convencional.
-        function startTouch(ev) {
-    // Procesar el evento
-    elementoTouch.innerHTML = `<input type="text">`;
-    }
-        window.addEventListener('touchstart', function(event){
-        //Comprobamos si hay varios eventos del mismo tipo
-        if (event.targetTouches.length == 1) { 
-        var touch = event.targetTouches[0]; 
-        // con esto solo se procesa UN evento touch
-        elementoTouch.innerHTML = `<input type="text">`;
-        }
-
-    }, true);*/
-
-    </script> 
+    <script src="src/main.js"> </script> 
     <!-- public/js/bundle.min -->
 </body>
 </html>
