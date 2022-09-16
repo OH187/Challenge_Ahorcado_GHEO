@@ -42,7 +42,6 @@ var palabras = ['CONSOLA', 'PLATAFORMA', 'ALURA', 'JAVASCRIPT', 'HTML', 'CHALLEN
 var adivina = document.querySelector('.adivina');
 var letras = document.querySelector('.letras')
 var palabraAdivinar = [];
-
 // var newWord = document.querySelector(".input-palabra").value;
 var imagen = document.querySelector('.guillotina')
 var malas = document.querySelector('.malas');
@@ -155,7 +154,7 @@ function adivinar(juego, letra){
     if(letras.has(letra)){
          //Agregamos a la lista de letras adivinadas
         adivinado.add(letra);
-        //Actualizamos las letras adivinadas
+        //Actualizamos las letras adivinadas disminuyendo los espacios mostrados
         juego.restante--;
         if(juego.restante === 0){
 
@@ -175,12 +174,12 @@ function adivinar(juego, letra){
 function agregarPalabra(){
         var newWord = document.querySelector(".input-palabra").value;
         const expres = /[\s\d.*+\-¿?^$@{}´\u00E0-\u00FC'()|[\]\\]/gu.test(newWord); //Expresion regular áéíóú-ÁÉÍÓÚ, quita acentos
-    if(newWord.length > 8 || newWord == ''){
+    
+        if(newWord.length > 8 || newWord == ''){ //Valida si esta vacio o la palabra tiene mas de 8 letras
         alert("Ingrese una palabra sin acento y 8 letras maximo");
     }  
     else{ 
-            if(expres == true){   
-                    //Se añaden las letras validas
+            if(expres == true){   //Si agrega una palabra con acentos o con caracteres especiales muestra el alerta
                     alert('Escriba una palabra válida o sin acentos');
     
             }else{
@@ -194,7 +193,8 @@ function agregarPalabra(){
     }
 
   var nuevaPalabra = sessionStorage.getItem("palabra"); //Llamamos el valor que contiene el key se sessionStorage
-  //Removes el null del arreglo, para que no de error
+  
+  //Removes el null del sessionstorage del arreglo, para que no de error
     if(nuevaPalabra == null){
         sessionStorage.removeItem('palabra');
     }else{
@@ -209,7 +209,7 @@ function palabraAleatoria(){
 
 //Ejecuta la funcion que inicia el juego
 function nuevoJuego(){
-    entrada.value = '';
+    entrada.value = ''; //Limpia el input
     malas.innerHTML = '';
     var palabra = palabraAleatoria();
     

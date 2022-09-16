@@ -14,7 +14,7 @@
     </header>
 
     
-        <input pattern="^[A-Za-z]+$" maxlength="8" style="text-transform: uppercase" id="palabra" class="input-palabra" type="text" placeholder="Ingrese una palabra" required>
+        <input  pattern="^[A-Za-z]+$" maxlength="8" style="text-transform: uppercase" id="palabra" class="input-palabra" type="text" placeholder="Ingrese una palabra" onkeypress="return (event.charCode >= 90 && event.charCode <= 122)" autofocus required>
 
     <section class="botones-palabra">
         <span><img  src="public/img/info.png" alt="">Maximo 8 letras sin acentos ni caracteres especiales</span>

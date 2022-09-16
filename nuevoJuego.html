@@ -35,8 +35,8 @@
                 
     <section class="botones-adivinar">
 
-        <span><img  src="public/img/info.png" alt="Imagen de informacion">Ingrese una letra </span> 
-        <input id="btnNuevo" class="boton-nuevo" type="button" value="Nuevo juego" onclick="nuevoJuego()">
+        <span><img  src="public/img/info.png" alt="Imagen de informacion">Ingrese una letra, bórrela e ingrese otra.</span> 
+        <input id="btnNuevo" class="boton-nuevo" type="button" value="Nuevo juego" onclick="nuevoJuego()" onkeypress="return (event.charCode >= 90 && event.charCode <= 122)" autofocus>
         <a href="index.html"><input class="boton-cancelar"  type="button" value="Desistir" ></a>
     </section>
 

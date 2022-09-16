@@ -1,13 +1,9 @@
 @mixin botones-mobile {
     font-family: $fuente-secundaria;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
     width: 90%;
 }
 @mixin boton-azul {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 2rem;
     background-color: $azul;
     color: $blanco;
@@ -23,7 +19,7 @@
 }
 
 @mixin boton-gris {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 2rem;
     background-color: $gris;
     border-radius: 1.5rem;

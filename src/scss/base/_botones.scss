@@ -1,6 +1,6 @@
 .botones{
     @include botones-mobile;
-    margin: 15rem auto 0 auto;
+    margin: 15rem auto;
     @include telefono{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -65,7 +65,7 @@ span img{
 }
 .botones-adivinar{
     @include botones-mobile;
-    margin: 5rem auto 0 auto;
+    margin: 5rem auto;
     @include telefono{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
